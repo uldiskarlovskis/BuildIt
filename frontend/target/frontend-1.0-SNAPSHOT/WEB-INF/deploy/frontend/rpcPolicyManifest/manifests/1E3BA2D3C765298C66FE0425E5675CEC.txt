@@ -1,0 +1,2 @@
+serviceClass: lv.buildit.server.frontend.client.GreetingService
+path: BECDD2D1E3124A798E5248E5102E2989.gwt.rpc
