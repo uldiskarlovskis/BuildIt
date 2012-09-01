@@ -1,2 +1,0 @@
-# Module lv.buildit.server.frontend.frontendJUnit
-# RPC service class, partial path of RPC policy file
