@@ -1,5 +1,7 @@
 ## mine
 target/
+gwt-unitCache/
+.gwt/
 
 #################
 ## Eclipse
