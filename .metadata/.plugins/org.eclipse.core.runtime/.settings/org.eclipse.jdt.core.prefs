@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.GWT_HOME=C\:/tools/gwt-2.5.0.rc1
 org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/Uldis/.m2/repository
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled

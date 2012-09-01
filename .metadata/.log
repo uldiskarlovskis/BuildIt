@@ -2361,3 +2361,43 @@ org.eclipse.core.runtime.CoreException: The archive: /frontend/target/generated-
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 !SUBENTRY 1 org.eclipse.jdt.launching 4 150 2012-09-01 12:33:27.940
 !MESSAGE The archive: /frontend/target/generated-sources/gwt which is referenced by the classpath, does not exist.
+
+!ENTRY org.eclipse.osgi 2 1 2012-09-01 12:42:25.993
+!MESSAGE NLS unused message: LifecycleMappingPropertyPage_this_message in: org.eclipse.m2e.core.ui.internal.messages
+
+!ENTRY com.google.gwt.eclipse.core 4 0 2012-09-01 12:47:53.447
+!MESSAGE GWT compilation failed
+!SESSION 2012-09-01 13:17:12.240 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_32
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=lv_LV
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2012-09-01 13:17:42.451
+!MESSAGE Error while tracking project-level changes from a change in R/
+!STACK 1
+Java Model Exception: Java Model Status [Unbound classpath variable: 'C:tools/gwt-2.5.0.rc1/gwt-user.jar' in project 'frontend']
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2007)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.isResourceInAnOutputPath(ProjectChangeTimestampTracker.java:121)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:162)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.visitDelta(ProjectChangeTimestampTracker.java:169)
+	at com.google.gdt.eclipse.core.projects.ProjectChangeTimestampTracker.resourceChanged(ProjectChangeTimestampTracker.java:181)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2353)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2153)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1530)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1319)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2740)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2019)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.initializeAfterLoad(JavaScriptCore.java:2655)
+	at org.eclipse.wst.jsdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:32)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 965 2012-09-01 13:17:42.452
+!MESSAGE Unbound classpath variable: 'C:tools/gwt-2.5.0.rc1/gwt-user.jar' in project 'frontend'

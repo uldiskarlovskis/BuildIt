@@ -4,18 +4,25 @@
 		<item value="1080" key="dialogWidth"/>
 		<item value="625" key="dialogHeight"/>
 		<list key="orderedProviders">
+			<item value="org.eclipse.ui.preferences"/>
+			<item value="org.eclipse.ui.preferences"/>
 			<item value="org.eclipse.ui.commands"/>
 			<item value="org.eclipse.ui.perspectives"/>
 			<item value="org.eclipse.ui.actions"/>
 			<item value="org.eclipse.e4.ui.parts"/>
 		</list>
 		<list key="textArray">
+			<item value="wind"/>
+			<item value="des"/>
 			<item value="gwt"/>
 			<item value="jav"/>
+			<item value="java"/>
 			<item value="worksp"/>
 			<item value="git"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.wb.core.preferences.MainPreferencePage"/>
+			<item value="com.google.gdt.eclipse.designer.gpe.preferences.DesignerPreferencePage"/>
 			<item value="org.eclipse.ui.window.preferences(preferencePageId=com.google.gwt.eclipse.core.preferences.ui.GwtPreferencePage)"/>
 			<item value="org.eclipse.jst.j2ee.J2EEPerspective"/>
 			<item value="openWorkspace"/>
@@ -24,6 +31,8 @@
 		<list key="textEntries">
 			<item value="1"/>
 			<item value="1"/>
+			<item value="1"/>
+			<item value="2"/>
 			<item value="1"/>
 			<item value="1"/>
 		</list>
@@ -39,6 +48,12 @@
 		<item value="-83" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.mylyn.ui.wizards.new"/>
+		</list>
+	</section>
 	<section name="ShowViewDialog">
 		<item value="311" key="DIALOG_WIDTH"/>
 		<item value="92" key="DIALOG_Y_ORIGIN"/>
@@ -47,8 +62,9 @@
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="ImportExportAction">
-		<item value="org.eclipse.m2e.core.wizards.Maven2ImportWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.m2e"/>
 		</list>
 	</section>
