@@ -2302,3 +2302,62 @@ Contains: Resource is out of sync with the file system: '/frontend/target/fronte
 !MESSAGE Publishing of 'frontend' failed
 !SUBENTRY 2 org.eclipse.core.resources 4 274 2012-08-31 00:00:08.115
 !MESSAGE Resource is out of sync with the file system: '/frontend/target/frontend-1.0-SNAPSHOT/WEB-INF/classes/lv/buildit/server/frontend/client/Messages.class'.
+!SESSION 2012-09-01 12:30:16.871 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_32
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=lv_LV
+Framework arguments:  -product org.eclipse.epp.package.jee.product C:\work\BuildIt\frontend\.project
+Command-line arguments:  -data C:\work\BuildIt -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product C:\work\BuildIt\frontend\.project
+
+!ENTRY com.google.gdt.eclipse.suite 4 0 2012-09-01 12:33:27.738
+!MESSAGE Launch configuration processor failed to run
+!STACK 1
+org.eclipse.core.runtime.CoreException: The archive: /frontend/target/generated-sources/gwt which is referenced by the classpath, does not exist.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1397)
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1382)
+	at org.eclipse.jdt.launching.JavaRuntime.resolveRuntimeClasspathEntry(JavaRuntime.java:947)
+	at org.eclipse.jdt.launching.StandardClasspathProvider.resolveClasspath(StandardClasspathProvider.java:75)
+	at com.google.gwt.eclipse.core.launch.ModuleClasspathProvider.resolveClasspath(ModuleClasspathProvider.java:200)
+	at com.google.gdt.eclipse.maven.launch.MavenClasspathProvider.resolveClasspath(MavenClasspathProvider.java:201)
+	at org.eclipse.jdt.internal.launching.RuntimeClasspathProvider.resolveClasspath(RuntimeClasspathProvider.java:63)
+	at org.eclipse.jdt.launching.JavaRuntime.resolveRuntimeClasspath(JavaRuntime.java:1249)
+	at org.eclipse.jdt.launching.AbstractJavaLaunchConfigurationDelegate.getClasspath(AbstractJavaLaunchConfigurationDelegate.java:412)
+	at com.google.gdt.eclipse.core.launch.LaunchConfigurationProcessorUtilities.getClasspath(LaunchConfigurationProcessorUtilities.java:147)
+	at com.google.gdt.eclipse.core.launch.LaunchConfigurationProcessorUtilities.getClassLoaderFor(LaunchConfigurationProcessorUtilities.java:130)
+	at com.google.gdt.eclipse.suite.launch.processors.MainTypeProcessor.computeMainTypeName(MainTypeProcessor.java:115)
+	at com.google.gdt.eclipse.suite.launch.processors.MainTypeProcessor.update(MainTypeProcessor.java:171)
+	at com.google.gdt.eclipse.suite.launch.processors.LaunchConfigurationUpdater.update(LaunchConfigurationUpdater.java:151)
+	at com.google.gdt.eclipse.suite.launch.processors.LaunchConfigAffectingChangesListener.syncUpdate(LaunchConfigAffectingChangesListener.java:93)
+	at com.google.gdt.eclipse.suite.launch.processors.LaunchConfigAffectingChangesListener.access$2(LaunchConfigAffectingChangesListener.java:89)
+	at com.google.gdt.eclipse.suite.launch.processors.LaunchConfigAffectingChangesListener$1.runInWorkspace(LaunchConfigAffectingChangesListener.java:78)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 150 2012-09-01 12:33:27.740
+!MESSAGE The archive: /frontend/target/generated-sources/gwt which is referenced by the classpath, does not exist.
+
+!ENTRY com.google.gdt.eclipse.suite 4 0 2012-09-01 12:33:27.940
+!MESSAGE Launch configuration processor failed to run
+!STACK 1
+org.eclipse.core.runtime.CoreException: The archive: /frontend/target/generated-sources/gwt which is referenced by the classpath, does not exist.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1397)
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1382)
+	at org.eclipse.jdt.launching.JavaRuntime.resolveRuntimeClasspathEntry(JavaRuntime.java:947)
+	at org.eclipse.jdt.launching.StandardClasspathProvider.resolveClasspath(StandardClasspathProvider.java:75)
+	at com.google.gwt.eclipse.core.launch.ModuleClasspathProvider.resolveClasspath(ModuleClasspathProvider.java:200)
+	at com.google.gdt.eclipse.maven.launch.MavenClasspathProvider.resolveClasspath(MavenClasspathProvider.java:201)
+	at org.eclipse.jdt.internal.launching.RuntimeClasspathProvider.resolveClasspath(RuntimeClasspathProvider.java:63)
+	at org.eclipse.jdt.launching.JavaRuntime.resolveRuntimeClasspath(JavaRuntime.java:1249)
+	at org.eclipse.jdt.launching.AbstractJavaLaunchConfigurationDelegate.getClasspath(AbstractJavaLaunchConfigurationDelegate.java:412)
+	at com.google.gdt.eclipse.core.launch.LaunchConfigurationProcessorUtilities.getClasspath(LaunchConfigurationProcessorUtilities.java:147)
+	at com.google.gdt.eclipse.core.launch.LaunchConfigurationProcessorUtilities.getClassLoaderFor(LaunchConfigurationProcessorUtilities.java:130)
+	at com.google.gdt.eclipse.suite.launch.processors.MainTypeProcessor.computeMainTypeName(MainTypeProcessor.java:115)
+	at com.google.gdt.eclipse.suite.launch.processors.MainTypeProcessor.update(MainTypeProcessor.java:171)
+	at com.google.gdt.eclipse.suite.launch.processors.LaunchConfigurationUpdater.update(LaunchConfigurationUpdater.java:151)
+	at com.google.gdt.eclipse.suite.launch.processors.LaunchConfigAffectingChangesListener.syncUpdate(LaunchConfigAffectingChangesListener.java:93)
+	at com.google.gdt.eclipse.suite.launch.processors.LaunchConfigAffectingChangesListener.access$2(LaunchConfigAffectingChangesListener.java:89)
+	at com.google.gdt.eclipse.suite.launch.processors.LaunchConfigAffectingChangesListener$1.runInWorkspace(LaunchConfigAffectingChangesListener.java:78)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 150 2012-09-01 12:33:27.940
+!MESSAGE The archive: /frontend/target/generated-sources/gwt which is referenced by the classpath, does not exist.
