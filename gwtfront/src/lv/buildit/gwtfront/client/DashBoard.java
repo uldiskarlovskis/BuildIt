@@ -14,8 +14,12 @@
  *******************************************************************************/
 package lv.buildit.gwtfront.client;
 
+import lv.buildit.gwtfront.widgets.DataLabel;
+
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.shared.GWT;
 import com.google.gwt.dom.client.Element;
+import com.google.gwt.dom.client.Style.BorderStyle;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.DragOverEvent;
@@ -63,8 +67,8 @@ public class DashBoard implements EntryPoint {
 		verticalPanel.add(topGlobalPanel);
 		verticalPanel.setCellHorizontalAlignment(topGlobalPanel, HasHorizontalAlignment.ALIGN_CENTER);
 		
-		InlineLabel nlnlblWelcomeText = new InlineLabel("Welcome Uldis");
-		topGlobalPanel.add(nlnlblWelcomeText);
+		InlineLabel topWelcomeText = new InlineLabel("Welcome Uldis");
+		topGlobalPanel.add(topWelcomeText);
 		
 		Hyperlink hprlnkDashboard = new Hyperlink("Dashboard", false, "newHistoryToken");
 		topGlobalPanel.add(hprlnkDashboard);
@@ -98,54 +102,19 @@ public class DashBoard implements EntryPoint {
 		simplePanel.setWidget(treeWrapper);
 		treeWrapper.setSize("100%", "100%");
 		
-		
-		
 		TreeItem trtmNewItem = new TreeItem("New item");
 		trtmNewItem.setText("Group1");
 		toolSet.addItem(trtmNewItem);
 		
-		TreeItem treeItem_1 = new TreeItem("New item");
-		treeItem_1.setText("Group2");
-		trtmNewItem.addItem(treeItem_1);
 		
 		TreeItem treeItem_2 = new TreeItem("New item");
 		treeItem_2.setText("Group2");
 		trtmNewItem.addItem(treeItem_2);
 		
-		TreeItem trtmNewItem2 = new TreeItem("New item");
-		trtmNewItem2.setText("Group2");
-		toolSet.addItem(trtmNewItem2);
 		
-		TreeItem treeItem = new TreeItem("New item");
-		trtmNewItem2.addItem(treeItem);
-		treeItem.setText("Group2");
+		createTreeItem(trtmNewItem, "step 1");
+		createTreeItem(trtmNewItem, "step 2");
 		
-		TreeItem treeItem_3 = new TreeItem("New item");
-		treeItem_3.setText("Draggable");
-		trtmNewItem2.addItem(treeItem_3);
-		
-		Label label = new Label();
-		label.setText("Label1");
-		treeItem_3.addItem(label);
-		label.getElement().setDraggable(Element.DRAGGABLE_TRUE);
-		label.addDragStartHandler(new DragStartHandler() {
-			@Override
-			public void onDragStart(DragStartEvent event) {
-				event.setData("text", "Label 1");
-			}
-		});
-		
-		
-		Label label2 = new Label();
-		label2.setText("Label2");
-		treeItem_3.addItem(label2);
-		label2.getElement().setDraggable(Element.DRAGGABLE_TRUE);
-		label2.addDragStartHandler(new DragStartHandler() {
-			@Override
-			public void onDragStart(DragStartEvent event) {
-				event.setData("text", "Label 2");
-			}
-		});
 		
 		final AbsolutePanel designBoard = new AbsolutePanel();
 		splitLayoutPanel.add(designBoard);
@@ -158,18 +127,19 @@ public class DashBoard implements EntryPoint {
 			}
 		}, DragOverEvent.getType());
 
-		
-		
-		
+				
 		designBoard.addDomHandler(new DropHandler() {
 			
 			@Override
-			public void onDrop(DropEvent event) {				
+			public void onDrop(DropEvent event) {		
 				String data = event.getData("text");
-				
-				Label task1 = new Label("some label");
-				
-				designBoard.add(task1, 20, 20);
+				//TODO: if existed on the same panel, don't make a new object
+				//can be implemented with aggregation actually
+				DataLabel item = new DataLabel(data);
+				makeDraggable(item);
+				int xPos = event.getNativeEvent().getClientX() - designBoard.getAbsoluteLeft();
+				int yPos = event.getNativeEvent().getClientY() - designBoard.getAbsoluteTop();
+				designBoard.add(item, xPos, yPos);
 			}
 		}, DropEvent.getType());
 		
@@ -181,5 +151,23 @@ public class DashBoard implements EntryPoint {
 		footerPanel.add(nlnlblFooter);
 	}
 	
+	private void createTreeItem(TreeItem parentTreeItem, final String id){
+		DataLabel item = new DataLabel();
+		item.setText(id);
+		
+		parentTreeItem.addItem(item);
+		makeDraggable(item);
+	}
+	
+	//todo: must be generic
+	private void makeDraggable(final DataLabel item){
+		item.getElement().setDraggable(Element.DRAGGABLE_TRUE);
+		item.addDragStartHandler(new DragStartHandler() {
+			@Override
+			public void onDragStart(DragStartEvent event) {
+				event.setData("text", item.getText());
+			}
+		});
+	}
 	
 }
