@@ -1,0 +1,7 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="com.google.gwt.user.theme.standard.Standard"/>
+
+	<set-property name="user.agent" value="safari" />
+	<entry-point class="lv.buildit.gwtfront.client.DashBoard"/>
+</module>
